@@ -25,18 +25,18 @@ public:
 
 
 	//	Weronika
-	void bubbleSort();		// Sortowanie bombelkowe
+	void bubbleSort();		// Sortowanie bąbelkowe
 	void selectionSort();	// Sortowanie przez wybieranie
 	void quickSortH();		// Sortowanie szybkie Hoare'a
 
 	//	Arek
-	void shakerSort();		// Sortowanie bombelkowe wariant wahadlowym
+	void shakerSort();		// Sortowanie bąbelkowe wariant wahadlowym
 	void insertSort();		// Sortowanie przez wstawianie
 	void heapSort();		// Sortowanie przez kopcowanie
 
 	//	Dominik
-	void bubbleSortCOM();	// Sortowanie bombelkowe z ciagla kontrla monotonicznosci
-	void bucketSort();		// Sortowanie kube�kowe
+	void bubbleSortCOM();	// Sortowanie bąbelkowe z ciagla kontrla monotonicznosci
+	void bucketSort();		// Sortowanie kubełkowe
 	void quickSortL();		// Sortowanie szybkie Lomuta
 
 
