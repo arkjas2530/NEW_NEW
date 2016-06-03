@@ -25,7 +25,7 @@ void CSortTable::choice()
 	switch (sign)
 	{
 	case '1':
-		cout << "Podaj iloœæ elementów do tablicy: " << endl;
+		cout << "Podaj iloÅ“Ã¦ elementÃ³w do tablicy: " << endl;
 		cin >> n;
 		menuUserChoice();
 		break;
@@ -45,21 +45,6 @@ void CSortTable::choice()
 		cout << "Brak wyboru w menu. " << endl;
 
 	}
-}
-
-int *CSortTable::creatTable(int _n)
-{
-	table = nullptr;
-	try
-	{
-		table = new int[_n];
-	}
-	catch(std::bad_alloc &e)
-	{
-		cout << &e << endl;
-	}
-
-	return table;
 }
 
 void CSortTable::menuSort()
