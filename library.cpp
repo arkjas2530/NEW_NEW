@@ -1,6 +1,6 @@
-#include "library.h"
+#include "library.cpp",0
 
-int *CSortTable::creatTable(int _n)
+int *Libery::creatTable(int _n)
 {
 	table = nullptr;
 	try
