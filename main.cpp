@@ -3,7 +3,9 @@
 int main()
 {
 	CSortTable tablica;
-
+	
+	
+	
 
 	return 0;
 }
