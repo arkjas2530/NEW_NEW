@@ -61,7 +61,7 @@ void CSortTable::menuUserChoice()
 
 void CSortTable::menuSort()
 {
-	cout << "Podaj ilosc element do posortowania: ";
+	cout << "Podaj ilosc element do losowania: ";
 	int n; cin >> n;
 	
 	// JAKAS GENERACJA LOSOWANIA, nie pisze bo nie mam jak tego sprawdzic
