@@ -1,4 +1,4 @@
-#include "library.cpp",0
+#include "library.h"
 
 int *Libery::creatTable(int _n)
 {
