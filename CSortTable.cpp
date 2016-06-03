@@ -1,7 +1,6 @@
 #include "CSortTable.h"
-#include "library.h"
-
 #include <cstdlib>
+#include <random>
 
 using std::cout;
 using std::endl;
@@ -14,7 +13,6 @@ CSortTable::CSortTable()
 	{
 		show_menu();
 		choice();
-		
 		cout << "Nacisnij Enter aby kontynuowac..." << endl;
 		system("pause");
 		system("cls");
@@ -28,44 +26,84 @@ void CSortTable::choice()
 	switch (sign)
 	{
 	case '1':
-		menuUserChoice();
+		cout << "Podaj iloœæ elementów do tablicy: " << endl;
+		cin >> n;
+		table = creatTable(n);
+
+		menuUserChoice(n);
 		break;
-		
+
 	case '2':
-		menuSort();
+		cout << "Podaj ilosc elementow do losowania: " << endl;
+		cin >> n;
+		table = creatTable(n);
+		menuPseudoChoice(n);
 		break;
-		
 	case '3':
-		menu();	// TWORZENIE TABELKI Z DANYMI
+		menu();
+		// TWORZENIE TABELKI Z DANYMI
 		break;
-		
 	case'0':
 		exit(0);
-		
 	default:
-		cout << "Brak wyboru w menu. " << endl;
+		cout << "Brak wyboru w menu.Sprobuj ponownie " << endl;
+
 	}
 }
 
-// Do sprawdzenia jeszcze bo nie mam kompilatora :v DK
-void CSortTable::menuUserChoice()
+int *CSortTable::creatTable(int _n)
 {
-	cout << "Podaj ilosc element do posortowania: ";
-	int n; cin >> n;
-	
-	table = creatTable(n); // tworzenie tablicy
-	
-	for(int i = 0; i < n; i++)
-		cin >> *table++;
+	table = nullptr;
+	try
+	{
+		table = new int[_n];
+	}
+	catch(std::bad_alloc &e)
+	{
+		cout << &e << endl;
+	}
+
+	return table;
 }
 
-void CSortTable::menuSort()
+void CSortTable::menuPseudoChoice(int _n)
 {
-	cout << "Podaj ilosc element do losowania: ";
-	int n; cin >> n;
-	
-	// JAKAS GENERACJA LOSOWANIA, nie pisze bo nie mam jak tego sprawdzic
+	int a, b;
+	// Zabezpieczenie generatora, da sie to jakos zrobiæ na TRY CATCH ??? ~AREK
+	cout << "Podaj zakres z ktorego maja byc generowane liczby" << endl;
+	cin >> a >> b;
+	while (a >= b)
+	{
+		cout << "Poczatek zakresu jest wiekszy lub rowny koncu. Sprobuj jeszcze raz" << endl;
+		cin >> a >> b;
+	}
+	// Stworzenie generatora liczb pseudolosowych u¿ywaj¹cego algorytmu mt19937
+	std::random_device rd;
+	std::mt19937 mt(rd());
+	std::uniform_int_distribution<int> generate(a, b);
+
+	// Przypisanie nowo wygenerowanej liczby pseudolosowej:
+	for (int i = 0; i < _n;i++)
+	{
+		table[i] = generate(mt);
+		cout << table[i] << " ";
+	}
 }
+void CSortTable::menuUserChoice(int _n)
+{
+	for (int i = 0; i < _n;i++)
+	{
+		cout << "Podaj " << i + 1 << " element tablicy" << endl;
+		cin >> table[i];
+	}
+	//nie wiem czy zostawiæ obczajcie to ! ~AREK
+	//system("cls");
+}
+void CSortTable::menu()
+{
+
+}
+
 
 void CSortTable::show_menu()
 {
@@ -74,10 +112,5 @@ void CSortTable::show_menu()
 	cout << "2. Realizacja algorytmow przy pomocy tablicy uzupelnionej liczbami losowymi" << endl;
 	cout << "3. Tworzenie tabeli" << endl;
 	cout << "0. Opuszczenie programu" << endl;
-}
-
-void CSortTable::menu()
-{
-	
 }
 
