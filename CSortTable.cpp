@@ -47,9 +47,22 @@ void CSortTable::choice()
 	}
 }
 
+// Do sprawdzenia jeszcze bo nie mam kompilatora :v
+void CSortTable::menuUserChoice()
+{
+	cout << "Podaj ilosc element do posortowania: ";
+	int n; cin >> n;
+	
+	for(int i = 0; i < n; i++)
+		cin >> *table++;
+}
+
 void CSortTable::menuSort()
 {
-
+	cout << "Podaj ilosc element do posortowania: ";
+	int n; cin >> n;
+	
+	// JAKAS GENERACJA LOSOWANIA, nie pisze bo nie mam jak tego sprawdzic
 }
 
 void CSortTable::show_menu()
