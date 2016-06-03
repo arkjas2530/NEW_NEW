@@ -1,4 +1,6 @@
 #include "CSortTable.h"
+#include "library.h"
+
 #include <cstdlib>
 
 using std::cout;
@@ -12,6 +14,7 @@ CSortTable::CSortTable()
 	{
 		show_menu();
 		choice();
+		
 		cout << "Nacisnij Enter aby kontynuowac..." << endl;
 		system("pause");
 		system("cls");
@@ -25,33 +28,32 @@ void CSortTable::choice()
 	switch (sign)
 	{
 	case '1':
-		cout << "Podaj iloœæ elementów do tablicy: " << endl;
-		cin >> n;
 		menuUserChoice();
 		break;
-
+		
 	case '2':
-		cout << "Podaj ilosc elementow do losowanie: " << endl;
-		cin >> n;
 		menuSort();
 		break;
+		
 	case '3':
-		menu();
-		// TWORZENIE TABELKI Z DANYMI
+		menu();	// TWORZENIE TABELKI Z DANYMI
 		break;
+		
 	case'0':
 		exit(0);
+		
 	default:
 		cout << "Brak wyboru w menu. " << endl;
-
 	}
 }
 
-// Do sprawdzenia jeszcze bo nie mam kompilatora :v
+// Do sprawdzenia jeszcze bo nie mam kompilatora :v DK
 void CSortTable::menuUserChoice()
 {
 	cout << "Podaj ilosc element do posortowania: ";
 	int n; cin >> n;
+	
+	table = creatTable(n); // tworzenie tablicy
 	
 	for(int i = 0; i < n; i++)
 		cin >> *table++;
@@ -74,11 +76,8 @@ void CSortTable::show_menu()
 	cout << "0. Opuszczenie programu" << endl;
 }
 
-void CSortTable::menuUserChoice()
-{
-}
-
 void CSortTable::menu()
 {
+	
 }
 
