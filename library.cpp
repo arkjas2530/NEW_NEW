@@ -2,10 +2,10 @@
 
 int *Libery::creatTable(int _n)
 {
-	table = nullptr;
+	int *board = nullptr;
 	try
 	{
-		table = new int[_n];
+		board = new int[_n];
 	}
 	catch(std::bad_alloc &e)
 	{
