@@ -9,7 +9,7 @@ int *Libery::creatTable(int _n)
 	}
 	catch(std::bad_alloc &e)
 	{
-		cout << &e << endl;
+		std::cout << &e << std::endl;
 	}
 
 	return table;
