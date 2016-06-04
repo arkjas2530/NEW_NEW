@@ -12,5 +12,5 @@ int *Libery::creatTable(int _n)
 		std::cout << &e << std::endl;
 	}
 
-	return table;
+	return board;
 }
