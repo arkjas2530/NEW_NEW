@@ -12,5 +12,5 @@ CTable::~CTable()
 
 int CTable::size()
 {
-	return sizeof(table)/sizeof(table[0]);
+	return sizeBoard;
 }
