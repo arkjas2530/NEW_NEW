@@ -6,13 +6,8 @@ class CSortTable:public CTable
 private:
 	char sign;
 	/*
-	Tworzy tablice dynamiczn¹
-	Arg: n - wielkoœæ tablicy
-	*/
-	int *creatTable(int _n);
-	/*
 	Losuje liczby do tablicy
-	Arg: n - wielkoœæ tablicy
+	Arg: n - wielkoÅ“Ã¦ tablicy
 	*/
 	void menuPseudoChoice(int _n);
 	/*
@@ -20,13 +15,13 @@ private:
 	*/
 	void show_menu();
 	/*
-	Algorytm do wprowadzania elentów do tablicy z klawiatury
-	Arg: n - wielkoœæ tablicy
+	Algorytm do wprowadzania elentÃ³w do tablicy z klawiatury
+	Arg: n - wielkoÅ“Ã¦ tablicy
 	*/
 	void menuUserChoice(int _n);
 	void menu();
 	/*
-	Switch, g³owne menu
+	Switch, gÂ³owne menu
 	*/
 	void choice();
 	
