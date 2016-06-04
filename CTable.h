@@ -9,7 +9,7 @@ public:
 	///////////////////////////////////////////////////
 	// METODY
 	///////////////////////////////////////////////////
-	int size(); // sprawdza rozmiar tablicy
+	int size(); // sprawdza rozmiar tablicy, to powinno byc typu size_t, ale trzeba bedzie uwazac na warning
 	int swap(); // zamienia dwie tablice TEGO typu
 
 
