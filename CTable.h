@@ -1,7 +1,11 @@
 class CTable
 {
+private:
+	int sizeBoard; // Rozmiar tablicy 
+	
 protected:
 	int *table; // tablica ktora bedzie sortowana :D
+
 
 public:
 	CTable();
