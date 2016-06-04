@@ -26,7 +26,7 @@ void CSortTable::choice()
 	switch (sign)
 	{
 	case '1':
-		cout << "Podaj iloœæ elementów do tablicy: " << endl;
+		cout << "Podaj iloÅ“Ã¦ elementÃ³w do tablicy: " << endl;
 		cin >> n;
 		table = creatTable(n);
 
@@ -51,25 +51,11 @@ void CSortTable::choice()
 	}
 }
 
-int *CSortTable::creatTable(int _n)
-{
-	table = nullptr;
-	try
-	{
-		table = new int[_n];
-	}
-	catch(std::bad_alloc &e)
-	{
-		cout << &e << endl;
-	}
-
-	return table;
-}
 
 void CSortTable::menuPseudoChoice(int _n)
 {
 	int a, b;
-	// Zabezpieczenie generatora, da sie to jakos zrobiæ na TRY CATCH ??? ~AREK
+	// Zabezpieczenie generatora, da sie to jakos zrobiÃ¦ na TRY CATCH ??? ~AREK
 	cout << "Podaj zakres z ktorego maja byc generowane liczby" << endl;
 	cin >> a >> b;
 	while (a >= b)
@@ -77,7 +63,7 @@ void CSortTable::menuPseudoChoice(int _n)
 		cout << "Poczatek zakresu jest wiekszy lub rowny koncu. Sprobuj jeszcze raz" << endl;
 		cin >> a >> b;
 	}
-	// Stworzenie generatora liczb pseudolosowych u¿ywaj¹cego algorytmu mt19937
+	// Stworzenie generatora liczb pseudolosowych uÂ¿ywajÂ¹cego algorytmu mt19937
 	std::random_device rd;
 	std::mt19937 mt(rd());
 	std::uniform_int_distribution<int> generate(a, b);
@@ -96,7 +82,7 @@ void CSortTable::menuUserChoice(int _n)
 		cout << "Podaj " << i + 1 << " element tablicy" << endl;
 		cin >> table[i];
 	}
-	//nie wiem czy zostawiæ obczajcie to ! ~AREK
+	//nie wiem czy zostawiÃ¦ obczajcie to ! ~AREK
 	//system("cls");
 }
 void CSortTable::menu()
