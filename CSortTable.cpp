@@ -29,6 +29,7 @@ void CSortTable::choice()
 		cout << "Podaj iloœæ elementów do tablicy: " << endl;
 		cin >> n;
 		table = creatTable(n);
+		sizeBoard = n;
 
 		menuUserChoice(n);
 		break;
@@ -37,6 +38,7 @@ void CSortTable::choice()
 		cout << "Podaj ilosc elementow do losowania: " << endl;
 		cin >> n;
 		table = creatTable(n);
+		sizeBoard = n;
 		menuPseudoChoice(n);
 		break;
 	case '3':
